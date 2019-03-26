@@ -2,7 +2,7 @@
 
 def ugly_number(n):
 
-    if n > 2**31-1 or n < -2**31: return False
+    if n > 2**31-1 or n < -2**31 or n == 0 or n == 1 or n == 2 or n == -1 or n == -2: return False
     
     divisor = 2
     factors = []
@@ -23,3 +23,6 @@ assert ugly_number(14) is False , 'fall'
 assert ugly_number(2**31) is False, 'fall'
 assert ugly_number(-2**31-1) is False , 'fall'
 assert ugly_number(30000000000) is False , 'fall'
+assert ugly_number(1) is False, 'fall'
+assert ugly_number(0) is False, 'fall'
+assert ugly_number(-2) is False, 'fall'
